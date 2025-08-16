@@ -1,0 +1,269 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #fe652b;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 90vh;
+}
+
+/* Banner */
+.header-banner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header-banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Seção de entrada */
+.input-section {
+    flex: 2;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 2.5rem;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-family: "Inter", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Contêineres de entrada e botão */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 1rem;
+}
+
+.button-container {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilos de botão */
+button {
+    padding: 12px 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 0 25px 25px 0;
+    padding: 12px 20px;
+}
+
+.button-add:hover {
+    background-color: #a1a1a1;
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 10px;
+}
+
+.name-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.result-list {
+    margin-top: 15px;
+    color: #05DF05;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botão de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 1rem;
+}
+
+.button-draw img {
+    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* Media Queries para Responsividade */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .input-section {
+        border-radius: 48px 48px 0 0;
+    }
+}
+
+/* Smartphone (até 767px) */
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+    
+    .main-content {
+        min-height: 95vh;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .section-title {
+        font-size: 1.1rem;
+    }
+    
+    .input-section {
+        border-radius: 32px 32px 0 0;
+        padding: 15px;
+    }
+    
+    .input-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input-name {
+        border-radius: 25px;
+        margin-bottom: 10px;
+    }
+    
+    .button-add {
+        border-radius: 25px;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .button-draw {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .button-draw img {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+    
+    ul {
+        font-size: 0.9rem;
+    }
+    
+    .result-list {
+        font-size: 1rem;
+    }
+}
+
+/* Pequenos smartphones (até 480px) */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1rem;
+    }
+    
+    .input-name, button {
+        padding: 10px;
+    }
+}
